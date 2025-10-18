@@ -62,15 +62,26 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
           <i className="ri-arrow-left-line text-xl"></i>
         </button>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
-          🚀 ACESSO TINDER CRISTÃO
-        </h1>
+        <div className="text-center mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+            ACESSO
+          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            TINDER CRISTÃO
+          </h1>
+        </div>
         <p className="text-white/80 text-center text-xl mb-12">
           Escolha o melhor plano para você
         </p>
 
         {/* Video Section */}
         <div className="max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-3">
+            Veja Como Funciona
+          </h2>
+          <p className="text-white/80 text-center text-lg mb-6">
+            Conheça nossa plataforma e veja casais que se formaram
+          </p>
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-4 border border-white/20">
             <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
               <iframe
