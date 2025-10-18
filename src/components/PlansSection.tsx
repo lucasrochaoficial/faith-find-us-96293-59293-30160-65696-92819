@@ -55,43 +55,57 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 p-4 pb-24">
       <div className="max-w-6xl mx-auto pt-6">
         {/* Header */}
-        <button
-          onClick={onBack}
-          className="text-white bg-white/10 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition-colors mb-6"
-        >
-          <i className="ri-arrow-left-line text-xl"></i>
-        </button>
-
-        <div className="text-center mb-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            ACESSO
-          </h1>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            TINDER CRISTÃO
+        <div className="bg-gradient-to-r from-purple-800 to-indigo-900 rounded-3xl p-6 mb-8 relative">
+          <button
+            onClick={onBack}
+            className="absolute left-6 top-6 text-white bg-white/10 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition-colors"
+          >
+            <i className="ri-arrow-left-line text-xl"></i>
+          </button>
+          
+          <h1 className="text-3xl md:text-4xl font-bold text-center">
+            <span className="text-pink-400">Tinder</span>{' '}
+            <span className="text-orange-400">Cristão</span>
           </h1>
         </div>
-        <p className="text-white/80 text-center text-xl mb-12">
-          Escolha o melhor plano para você
-        </p>
 
         {/* Video Section */}
         <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-3">
-            Veja Como Funciona
-          </h2>
-          <p className="text-white/80 text-center text-lg mb-6">
-            Conheça nossa plataforma e veja casais que se formaram
-          </p>
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-4 border border-white/20">
-            <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/QTvgTq9cq8E?autoplay=1&controls=1"
-                title="Video Explicativo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+          <div className="bg-gradient-to-br from-purple-800/50 to-indigo-900/50 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+              <span className="gradient-text">Veja Como Funciona</span>
+            </h2>
+            <p className="text-white/80 text-center text-lg mb-6">
+              Conheça nossa plataforma e veja casais que se formaram
+            </p>
+            <div className="bg-black/30 rounded-2xl p-4 border border-white/10">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/QTvgTq9cq8E?autoplay=1&controls=1"
+                  title="Video Explicativo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Plans Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
+                <i className="ri-target-line text-white text-2xl"></i>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                ESCOLHA SEU PLANO
+              </h2>
+            </div>
+            <p className="text-white/80 text-lg">
+              Acesso completo à plataforma
+            </p>
           </div>
         </div>
 
