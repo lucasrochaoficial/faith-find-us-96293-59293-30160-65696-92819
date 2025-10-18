@@ -72,12 +72,12 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
         </div>
 
         {/* Video Section */}
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-6xl mx-auto mb-20">
           <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-400 text-center mb-3">
+            <h2 className="text-xl md:text-2xl font-bold text-pink-400 text-center mb-2">
               Veja Como Funciona
             </h2>
-            <p className="text-white/80 text-center text-lg mb-6">
+            <p className="text-white/80 text-center text-sm md:text-base mb-6">
               Conheça nossa plataforma e veja casais que se formaram
             </p>
             <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl">
