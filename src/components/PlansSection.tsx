@@ -111,21 +111,21 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
         </div>
 
         {/* Plans Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-3xl overflow-hidden shadow-2xl relative ${
-                plan.popular ? 'ring-4 ring-yellow-400 transform scale-105' : ''
+              className={`bg-white rounded-3xl overflow-hidden shadow-2xl ${
+                plan.popular ? 'ring-4 ring-yellow-400 mt-4' : ''
               }`}
             >
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white border-0 px-4 py-1 text-sm font-bold shadow-lg z-10">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white border-0 px-3 py-1 text-xs font-bold shadow-lg z-10">
                   ⭐ MAIS POPULAR
                 </Badge>
               )}
               
-              <div className={`${plan.gradient} p-6 text-white ${plan.popular ? 'pt-8' : ''}`}>
+              <div className={`${plan.gradient} p-6 text-white relative ${plan.popular ? 'pt-10' : ''}`}>
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-white/90 text-sm mb-4">{plan.duration}</p>
                 <div className="text-5xl font-bold mb-2">{plan.price}</div>
