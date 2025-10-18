@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tinder Cristão Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 280 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 280 100% 50%;
+
+    --radius: 1rem;
+    
+    /* Gradientes customizados */
+    --gradient-welcome: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #4F46E5 100%);
+    --gradient-gender: linear-gradient(135deg, #4F46E5 0%, #8B5CF6 50%, #EC4899 100%);
+    --gradient-button: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
+    --gradient-male: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    --gradient-female: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
+    --gradient-area-1: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    --gradient-area-2: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+    --gradient-area-3: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
+    --gradient-plan-1: linear-gradient(135deg, #F97316 0%, #EF4444 100%);
+    --gradient-plan-2: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    --gradient-plan-3: linear-gradient(135deg, #10B981 0%, #F59E0B 100%);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 280 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 100% 70%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 45 100% 70%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 280 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-pacifico {
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .gradient-welcome {
+    background: var(--gradient-welcome);
+  }
+  
+  .gradient-gender {
+    background: var(--gradient-gender);
+  }
+  
+  .gradient-button {
+    background: var(--gradient-button);
+  }
+  
+  .gradient-male {
+    background: var(--gradient-male);
+  }
+  
+  .gradient-female {
+    background: var(--gradient-female);
+  }
+  
+  .gradient-area-1 {
+    background: var(--gradient-area-1);
+  }
+  
+  .gradient-area-2 {
+    background: var(--gradient-area-2);
+  }
+  
+  .gradient-area-3 {
+    background: var(--gradient-area-3);
+  }
+  
+  .gradient-plan-1 {
+    background: var(--gradient-plan-1);
+  }
+  
+  .gradient-plan-2 {
+    background: var(--gradient-plan-2);
+  }
+  
+  .gradient-plan-3 {
+    background: var(--gradient-plan-3);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
