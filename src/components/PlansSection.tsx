@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from '@/components/ui/badge';
 
 interface PlansSectionProps {
   onBack: () => void;
@@ -26,10 +27,10 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
       gradient: 'gradient-plan-2',
       features: [
         'Matches ilimitados',
-        'Chat + chamadas',
+        'Chat + ligações',
         'Grupos por estado',
         'Filtros avançados',
-        'Suporte prioritário'
+        'Suporte whatsapp'
       ],
       link: 'https://www.ggcheckout.com/checkout/v2/GZLT1RH4NA87CJDvOKTv',
       popular: false
@@ -37,14 +38,18 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
     {
       name: 'ACESSO ANUAL',
       price: 'R$ 20,00',
-      duration: 'Acesso VITALÍCIO',
+      duration: '365 dias de acesso',
       gradient: 'gradient-plan-3',
       features: [
-        'Todos os recursos premium',
+        'Todos os recursos mensal',
+        'Chamadas de vídeo',
+        'Todos os grupos',
+        'Filtros avançados de interesses',
+        'Filtros por idade e distância',
+        'Perfil vip',
         '+5.000 materiais exclusivos',
-        'Suporte 24h VIP',
-        'Economia de 83%',
-        'Acesso vitalício'
+        'Suporte 24h',
+        'Eventos exclusivos'
       ],
       link: 'https://www.ggcheckout.com/checkout/v2/JTXguUYPqmF6yR9BCGi9',
       popular: true
@@ -110,20 +115,25 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onBack }) => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-3xl overflow-hidden shadow-2xl ${
+              className={`bg-white rounded-3xl overflow-hidden shadow-2xl relative ${
                 plan.popular ? 'ring-4 ring-yellow-400 transform scale-105' : ''
               }`}
             >
               {plan.popular && (
-                <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-center py-2">
-                  <span className="text-sm font-bold text-white">⭐ MAIS POPULAR</span>
-                </div>
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white border-0 px-4 py-1 text-sm font-bold shadow-lg z-10">
+                  ⭐ MAIS POPULAR
+                </Badge>
               )}
               
-              <div className={`${plan.gradient} p-6 text-white`}>
+              <div className={`${plan.gradient} p-6 text-white ${plan.popular ? 'pt-8' : ''}`}>
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-white/90 text-sm mb-4">{plan.duration}</p>
                 <div className="text-5xl font-bold mb-2">{plan.price}</div>
+                {plan.popular && (
+                  <Badge className="bg-green-500 text-white border-0 font-semibold">
+                    Economia de 83%
+                  </Badge>
+                )}
               </div>
 
               <div className="p-6">
