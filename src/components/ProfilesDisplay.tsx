@@ -161,9 +161,9 @@ const ProfilesDisplay: React.FC<ProfilesDisplayProps> = ({ onNext, onBack, quizD
     // Generate 4 profiles (1 unlocked + 3 locked) with random names and ages
     return Array.from({ length: 4 }, (_, index) => {
       let distance = '4.7 km';
-      if (index === 1) distance = '6.3 km';
-      if (index === 2) distance = '9.4 km';
-      if (index === 3) distance = '11.1 km';
+      if (index === 1) distance = '2.2 km';
+      if (index === 2) distance = '6.4 km';
+      if (index === 3) distance = '7.9 km';
       
       return {
         name: generateRandomName(profileGender),
